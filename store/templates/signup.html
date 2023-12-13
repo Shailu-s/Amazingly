@@ -1,0 +1,42 @@
+{% extends 'Base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="p-4 m-4">
+        <div class="alert alert-light border rounded" role="alert">
+            <strong>Create an account</strong>
+        </div>
+        <form action="/signup", method="POST">
+            {% csrf_token %}
+            <div>
+                <div class="form-group">
+                    <label for="">first_name</label>
+                    <input required type="" name="first_name" id="" class="form-control-sm form-control" placeholder="" aria-describedby="helpId">
+                  </div>
+                  <div class="form-group">
+                    <label for="">last_name</label>
+                    <input required type="" name="last_name" id="" class="form-control-sm form-control" placeholder="" aria-describedby="helpId">
+                  </div>
+                  <div class="form-group">
+                    <label for="">password</label>
+                    <input required type="password" name="password" id="" class="form-control-sm form-control" placeholder="" aria-describedby="helpId">
+                  </div>
+                  <div class="form-group">
+                    <label for="">phone</label>
+                    <input required type="phone" name="phone" id="" class="form-control-sm form-control" placeholder="" aria-describedby="helpId">
+                  </div>
+                  <div class="form-group">
+                    <label for="">email</label>
+                    <input required type="email" name="email" id="" class="form-control-sm form-control" placeholder="example@email.com" aria-describedby="helpId">
+                  </div>
+                  <div class="container">
+                    <input type="submit",name = 'Signup'>
+                  </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+{% endblock %}
